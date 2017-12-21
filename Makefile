@@ -1,0 +1,20 @@
+flags= -Wall 
+comp=g++
+prog=tarea3
+
+comp:$(prog)
+
+exe:$(prog)
+	./$(prog)
+
+$(prog): main.o
+	$(comp) main.o -o $(prog) $(flags)
+
+main.o: main.cpp
+	$(comp) -c main.cpp $(flags)
+
+clean:
+	rm -f *~
+	rm -f *.o
+	rm -f $(prog)
+	rm -f core*
