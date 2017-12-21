@@ -1,6 +1,7 @@
 Project 2 - Design and Analysis of Algorithms
-Longes Palindromic Subsequence
-=========
+=============================================
+Longest Palindromic Subsequence
+=============================================
 
 Run
 ---
