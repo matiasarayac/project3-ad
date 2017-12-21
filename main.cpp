@@ -6,9 +6,9 @@ using namespace std;
 int max(int x, int y) { return (x > y) ? x : y; }
 
 // Returns the length of the longest palindromic subsequence in seq
-int lps(string str) {
-    u_int64_t n = str.length();
-    int i, j, cl;
+int lps(char *str) {
+    u_int64_t n = strlen(str);
+    int i, j, subs;
     int L[n][n];  // Create a table to store results of subproblems
 
 
@@ -17,10 +17,10 @@ int lps(string str) {
         L[i][i] = 1;
 
     // substring
-    for (cl = 2; cl <= n; cl++) {
-        for (i = 0; i < n - cl + 1; i++) {
-            j = i + cl - 1;
-            if (str[i] == str[j] && cl == 2)
+    for (subs = 2; subs <= n; subs++) {
+        for (i = 0; i < n - subs + 1; i++) {
+            j = i + subs - 1;
+            if (str[i] == str[j] && subs == 2)
                 L[i][j] = 2;
             else if (str[i] == str[j])
                 L[i][j] = L[i + 1][j - 1] + 2;
@@ -35,11 +35,12 @@ int lps(string str) {
 
 int main() {
 
-    string str;
-    getline(cin, str);
-    while (str.compare("")){
+    char str[2048];
+    cin >> str;
+
+    while (!cin.eof()){
         cout << lps(str) << endl;
-        getline(cin, str);
+        cin >> str;
     }
 
     return 0;
