@@ -1,0 +1,2 @@
+Matías Araya 201173082-8	| Análisis y diseño del agortimo. Código del algoritmo. 
+Sebastian Orellana 201273591-2	| Análisis y diseño del algoritmo. Lectura de las entradas y escritura salida.
