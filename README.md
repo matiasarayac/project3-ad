@@ -19,3 +19,8 @@ Clean everything created after `make`.
 ```sh
 make clean
 ```
+
+Note
+----
+
+For the file `long-words.txt` takes 40 \[s] aprox.

@@ -1,4 +1,4 @@
-flags= -Wall 
+flags= -Wall -std=c++11
 comp=g++
 prog=tarea3
 
