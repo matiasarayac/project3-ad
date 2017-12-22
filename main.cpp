@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
@@ -8,7 +9,7 @@ int max(int x, int y) { return (x > y) ? x : y; }
 // Returns the length of the longest palindromic subsequence in seq
 int lps(char *str) {
     u_int64_t n = strlen(str);
-    int i, j, subs;
+    u_int64_t i, j, subs;
     int L[n][n];  // Create a table to store results of subproblems
 
 
